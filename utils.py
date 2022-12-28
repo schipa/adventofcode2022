@@ -16,9 +16,9 @@ def print_title(title: str):
 
 
 def print_sol_part(nr: int, result):
-    print(colors.GREEN + ('Part %d: ' % nr) + colors.ENDC + ('%s' % result))
+    print('{}Part {}:{} {}'.format(colors.GREEN, nr, colors.ENDC, result))
 
 
-def read_input(day: int):
-    with open('%d-input.txt' % day, 'r') as f:
+def read_input(day: int, example: bool = False):
+    with open('{}{}-input.txt'.format(day, '-ex' if example else ''), 'r') as f:
         return f.read().splitlines()
